@@ -21,6 +21,7 @@ h2{
 h3{
     font-size: 128px;
     color: #666;
+    text-align: right;
 }
 a {
     font-family: 'Fjalla One', sans-serif;
@@ -37,7 +38,6 @@ header {
 h1{
     font-size: 48px;
     margin: 30px;
-
 }
 h1:nth-of-type(2){
     font-size: 96px;
@@ -50,12 +50,10 @@ main{
 }
 main p{
     font-size: 24px;
+    margin-bottom: 50px;
 }
-main div{
+main a{
     margin-top: 50px;
-}
-main h3{
-    float: right;
 }
 main section article{
     margin: auto;
@@ -77,26 +75,42 @@ main section:nth-of-type(even) a{
 main section:nth-of-type(odd) article{
     color: #fff;
 }
-
+/* ====Hover Styling Sections==== */
+main section:nth-child(odd) a:hover{
+    color:black;
+    background: #fff;
+}
+main section:nth-child(odd) a:hover+h3{
+    color: #fff;
+}
+main section:nth-child(even) a:hover{
+    color: white;
+    background: black;
+}
+main section:nth-child(even) a:hover+h3{
+    color: black;
+}
 /* ====Styling Section 1==== */
 main section:first-child{
     height: 100vh;
-    background: url(../img/portfolio2.jpg) center/100% 100% no-repeat;
+    background:rgba(0,0,0,.8) url('../img/portfolio2.jpg') center/cover no-repeat;
+    background-blend-mode: multiply;
 }
 /* ====Styling Section 2==== */
 main section:nth-child(2){
     height: 100vh;
-    background: url(../img/portfolio3.png) center/100% 100% no-repeat;
+    background: url(../img/portfolio3.png) center/cover no-repeat;
 }
 /* ====Styling Section 3==== */
 main section:nth-child(3){
     height: 100vh;
-    background: url(../img/portfolio4.jpg) center/100% 100% no-repeat;
+    background:rgba(0,0,0,.8) url('../img/portfolio4.jpg') center/cover no-repeat;
+    background-blend-mode: multiply;
 }
 /* ====Styling Section 4==== */
 main section:nth-child(4){
     height: 100vh;
-    background: url(../img/portfolio5.png) center/100% 100% no-repeat;
+    background: url(../img/portfolio5.png) center/cover no-repeat;
 }
 /* ====Styling Section 5==== */
 main section:nth-child(5){
@@ -120,6 +134,8 @@ main section:nth-child(5) a{
 }
 main section:nth-child(5) a:hover{
     text-decoration: underline;
+    background: unset;
+    color: white;
 }
 /* ====Styling Footer==== */
 ul{
